@@ -25,6 +25,7 @@ const App = () => {
     const filteredPhotos = photos.filter((photo) => {
       const tagFilter = !tag || photo.tagId === tag;
       const titleFilter = !filter || photo.titulo.toLowerCase().includes(filter.toLocaleLowerCase())
+      
       return tagFilter && titleFilter
     })
 
