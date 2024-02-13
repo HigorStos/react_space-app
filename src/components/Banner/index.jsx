@@ -1,8 +1,8 @@
 import { StyledFigure, StyledTitle } from "./styles"
 
-const Banner = ({text, backgroundImage}) => {
+const Banner = ({text, background}) => {
   return (
-    <StyledFigure backgroundImage={backgroundImage}>
+    <StyledFigure background={background}>
       <StyledTitle>
         {text}
       </StyledTitle>

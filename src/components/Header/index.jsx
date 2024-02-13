@@ -1,11 +1,11 @@
 import TextLabel from '../TextField'
 import { StyledHeader } from './styles'
 
-const Header = () => {
+const Header = ({ setFilter }) => {
   return (
     <StyledHeader>
       <img src="./images/logo.png" alt="" />
-      <TextLabel />
+      <TextLabel setFilter={setFilter} />
     </StyledHeader>
   )
 }

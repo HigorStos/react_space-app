@@ -7,7 +7,7 @@ export const StyledFigure = styled.figure`
   min-height: 328px;
   margin: 0;
   border-radius: 20px;
-  background-image: ${ props => `url(${props.backgroundImage})` };
+  background-image: ${ props => `url(${props.background})` };
   background-repeat: no-repeat;
   background-size: cover;
 `

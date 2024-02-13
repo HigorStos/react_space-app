@@ -1,16 +1,27 @@
 import Title from "../Title"
-import Popular from "./Popular"
 import Tags from "./Tags"
+import ImagePost from "./ImagePost"
+import Popular from "./Popular"
 
-import { GalleryContainer, FluidSection } from "./styles"
+import { GalleryContainer, FluidSection, ImagesContainer } from "./styles"
 
-const Gallery = () => {
+const Gallery = ({ photos = [], setTag, onPhotoSelected, onFavoriteChange }) => {
   return (
     <>
-      <Tags />
+      <Tags setTag={setTag} />
       <GalleryContainer>
         <FluidSection>
           <Title>Navegue pela galeria</Title>
+          <ImagesContainer>
+            {photos.map((photo) => (
+              <ImagePost
+                key={photo.id}
+                photo={photo}
+                onZoom={onPhotoSelected}
+                onFavoriteChange={onFavoriteChange}
+              />
+            ))}
+          </ImagesContainer>
         </FluidSection>
         <Popular />
       </GalleryContainer>
